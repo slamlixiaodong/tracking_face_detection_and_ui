@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="map_process" name="map_process_node" type="map_process_node"  respawn="true" output="screen">
+    <!-- <param name="target_file_path" type="string" value="$(find map_process)/config/target_pose_file/" /> -->
+    <param name="map_file_path" type="string" value="$(find ros_ui)/config/map_file/" />
+    </node>
+</launch>

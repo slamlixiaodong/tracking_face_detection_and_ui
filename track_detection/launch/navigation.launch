@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
+    <include file="$(find track_detection)/launch/include/Track_Detecation.launch" />
+    <include file="$(find track_detection)/launch/include/face_detector.launch" />
+    <include file="$(find track_detection)/launch/include/move_base.launch" />
+    <include file="$(find ros_ui)/launch/ros_ui_navi.launch" />
+    <include file="$(find map_process)/launch/map_server_test.launch" />
+</launch>

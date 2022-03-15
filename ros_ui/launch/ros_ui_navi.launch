@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="ros_ui" name="ros_ui" type="ros_ui"  respawn="false" output="screen">
+    <param name="load_file_path" type="string" value="$(find ros_ui)/config/" />
+    <!-- trace_detection and navigation -->
+    <param name="mode" type="string" value="navigation" />  
+    <remap from="/ros_ui/target_pose_execu" to="/target_pose_execu" />
+    <remap from="/ros_ui/task_execu"  to="/task_execu" />
+    </node>
+</launch>

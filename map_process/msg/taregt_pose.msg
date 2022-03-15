@@ -1,0 +1,4 @@
+string map_name
+float64 target_pose_x
+float64 target_pose_y
+float64 target_pose_theta

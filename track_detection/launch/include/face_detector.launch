@@ -1,0 +1,14 @@
+
+<launch>
+    <node pkg="track_detection" name="track_detection" type="face_detector.py" output="screen">
+        <remap from="input_rgb_image" to="/camera/rgb" />
+        <rosparam>
+            haar_scaleFactor: 1.2
+            haar_minNeighbors: 2
+            haar_minSize: 40
+            haar_maxSize: 60
+        </rosparam>
+        <param name="cascade_1" value="$(find track_detection)/data/haarcascade_frontalface_alt.xml" />
+        <param name="cascade_2" value="$(find track_detection)/data/haarcascade_profileface.xml" />
+    </node>
+</launch>

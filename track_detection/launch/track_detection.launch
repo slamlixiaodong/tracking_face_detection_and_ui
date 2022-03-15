@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find track_detection)/launch/include/Track_Detecation.launch" />
+    <include file="$(find track_detection)/launch/include/face_detector.launch" />
+    <include file="$(find track_detection)/launch/include/gmapping_demo.launch" />
+    <include file="$(find ros_ui)/launch/ros_ui_track.launch" />
+    <include file="$(find map_process)/launch/map_server_test.launch" />
+</launch>
